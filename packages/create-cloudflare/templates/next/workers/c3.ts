@@ -65,5 +65,4 @@ export default {
 	devScript: "dev",
 	previewScript: "preview",
 	deployScript: "deploy",
-	compatibilityFlags: ["nodejs_compat"],
 } as TemplateConfig;

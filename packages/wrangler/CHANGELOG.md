@@ -1,5 +1,15 @@
 # wrangler
 
+## 3.114.9
+
+### Patch Changes
+
+- [#9128](https://github.com/cloudflare/workers-sdk/pull/9128) [`c535845`](https://github.com/cloudflare/workers-sdk/commit/c5358457c93bf6138386f829fd9be60c89ea9867) Thanks [@dario-piotrowicz](https://github.com/dario-piotrowicz)! - fix: remove outdated js-doc comment for `unstable_startDevWorker`'s `entrypoint`
+
+- [#9163](https://github.com/cloudflare/workers-sdk/pull/9163) [`d67cd0d`](https://github.com/cloudflare/workers-sdk/commit/d67cd0d8b4861ce9437e40a5e3d4de2b30f2da01) Thanks [@petebacondarwin](https://github.com/petebacondarwin)! - Do not report "d1 execute" command file missing error to Sentry
+
+- [#9166](https://github.com/cloudflare/workers-sdk/pull/9166) [`9b4c91d`](https://github.com/cloudflare/workers-sdk/commit/9b4c91dda738a6d6398780e73e455eacb89aa7ab) Thanks [@lambrospetrou](https://github.com/lambrospetrou)! - Fix d1 info command showing read_replication: [object Object]
+
 ## 3.114.8
 
 ### Patch Changes

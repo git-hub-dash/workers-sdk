@@ -1,5 +1,11 @@
 # create-cloudflare
 
+## 2.47.0
+
+### Minor Changes
+
+- [#8886](https://github.com/cloudflare/workers-sdk/pull/8886) [`e1df3d8`](https://github.com/cloudflare/workers-sdk/commit/e1df3d831466e38f3db019dbecc4067dc60fe4ea) Thanks [@emily-shen](https://github.com/emily-shen)! - use `wrangler types` to generate types instead of using the `@cloudflare/workers-types` package
+
 ## 2.46.2
 
 ### Patch Changes

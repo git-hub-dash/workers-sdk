@@ -1,5 +1,22 @@
 # miniflare
 
+## 4.20250508.0
+
+### Patch Changes
+
+- [#9174](https://github.com/cloudflare/workers-sdk/pull/9174) [`ceeb375`](https://github.com/cloudflare/workers-sdk/commit/ceeb375cac316a6508853511a1ad6ec15d120244) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore: update dependencies of "miniflare" package
+
+  The following dependency versions have been updated:
+
+  | Dependency                | From          | To            |
+  | ------------------------- | ------------- | ------------- |
+  | workerd                   | 1.20250507.0  | 1.20250508.0  |
+  | @cloudflare/workers-types | ^4.20250507.0 | ^4.20250508.0 |
+
+- [#9181](https://github.com/cloudflare/workers-sdk/pull/9181) [`349cffc`](https://github.com/cloudflare/workers-sdk/commit/349cffcd547e602a4bf3fb708122cf00bb4ad8d2) Thanks [@penalosa](https://github.com/penalosa)! - Add a mixed-mode-only browser rendering plugin
+
+- [#9168](https://github.com/cloudflare/workers-sdk/pull/9168) [`6b42c28`](https://github.com/cloudflare/workers-sdk/commit/6b42c28aa42457a64e9342b1cd1f92ad2228ff37) Thanks [@dario-piotrowicz](https://github.com/dario-piotrowicz)! - add `mixedModeConnectionString` to the various binding configs
+
 ## 4.20250507.0
 
 ### Patch Changes

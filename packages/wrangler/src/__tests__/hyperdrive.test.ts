@@ -761,15 +761,15 @@ describe("hyperdrive commands", () => {
 		await runWrangler("hyperdrive list");
 		expect(std.out).toMatchInlineSnapshot(`
 			"📋 Listing Hyperdrive configs
-			┌──────────────────────────────────────┬─────────────┬─────────┬────────────────┬──────┬────────────┬───────────┬──────────┬───────────────────────────────────────────────────────────────────────────────────┐
-			│ id                                   │ name        │ user    │ host           │ port │ scheme     │ database  │ caching  │ mtls                                                                              │
+			┌─┬─┬─┬─┬─┬─┬─┬─┬─┐
+			│ id │ name │ user │ host │ port │ scheme │ database │ caching │ mtls │
 			├──────────────────────────────────────┼─────────────┼─────────┼────────────────┼──────┼────────────┼───────────┼──────────┼───────────────────────────────────────────────────────────────────────────────────┤
-			│ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx │ test123     │ test    │ example.com    │ 5432 │ PostgreSQL │ neondb    │ enabled  │                                                                                   │
+			│ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx │ test123 │ test │ example.com │ 5432 │ PostgreSQL │ neondb │ enabled │ │
 			├──────────────────────────────────────┼─────────────┼─────────┼────────────────┼──────┼────────────┼───────────┼──────────┼───────────────────────────────────────────────────────────────────────────────────┤
-			│ yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy │ new-db      │ dbuser  │ www.google.com │ 3211 │ PostgreSQL │ mydb      │ disabled │                                                                                   │
+			│ yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy │ new-db │ dbuser │ www.google.com │ 3211 │ PostgreSQL │ mydb │ disabled │ │
 			├──────────────────────────────────────┼─────────────┼─────────┼────────────────┼──────┼────────────┼───────────┼──────────┼───────────────────────────────────────────────────────────────────────────────────┤
-			│ zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz │ new-db-mtls │ pg-mtls │ www.mtls.com   │ 3212 │            │ mydb-mtls │ enabled  │ {\\"ca_certificate_id\\":\\"1234\\",\\"mtls_certificate_id\\":\\"1234\\",\\"sslmode\\":\\"verify-full\\"} │
-			└──────────────────────────────────────┴─────────────┴─────────┴────────────────┴──────┴────────────┴───────────┴──────────┴───────────────────────────────────────────────────────────────────────────────────┘"
+			│ zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz │ new-db-mtls │ pg-mtls │ www.mtls.com │ 3212 │ │ mydb-mtls │ enabled │ {\\"ca_certificate_id\\":\\"1234\\",\\"mtls_certificate_id\\":\\"1234\\",\\"sslmode\\":\\"verify-full\\"} │
+			└─┴─┴─┴─┴─┴─┴─┴─┴─┘"
 		`);
 	});
 

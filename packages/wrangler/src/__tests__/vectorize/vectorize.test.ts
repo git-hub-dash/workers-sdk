@@ -310,13 +310,13 @@ describe("vectorize commands", () => {
 		await runWrangler("vectorize list --deprecated-v1=true");
 		expect(std.out).toMatchInlineSnapshot(`
 			"📋 Listing Vectorize indexes...
-			┌───────────────┬────────────┬───────────┬─────────────┬────────────────────────────┬────────────────────────────┐
-			│ name          │ dimensions │ metric    │ description │ created                    │ modified                   │
+			┌─┬─┬─┬─┬─┬─┐
+			│ name │ dimensions │ metric │ description │ created │ modified │
 			├───────────────┼────────────┼───────────┼─────────────┼────────────────────────────┼────────────────────────────┤
-			│ test-index    │ 768        │ cosine    │             │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
+			│ test-index │ 768 │ cosine │ │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
 			├───────────────┼────────────┼───────────┼─────────────┼────────────────────────────┼────────────────────────────┤
-			│ another-index │ 3          │ euclidean │             │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
-			└───────────────┴────────────┴───────────┴─────────────┴────────────────────────────┴────────────────────────────┘"
+			│ another-index │ 3 │ euclidean │ │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
+			└─┴─┴─┴─┴─┴─┘"
 		`);
 	});
 
@@ -325,13 +325,13 @@ describe("vectorize commands", () => {
 		await runWrangler("vectorize list");
 		expect(std.out).toMatchInlineSnapshot(`
 			"📋 Listing Vectorize indexes...
-			┌───────────────┬────────────┬─────────────┬──────────────┬────────────────────────────┬────────────────────────────┐
-			│ name          │ dimensions │ metric      │ description  │ created                    │ modified                   │
+			┌─┬─┬─┬─┬─┬─┐
+			│ name │ dimensions │ metric │ description │ created │ modified │
 			├───────────────┼────────────┼─────────────┼──────────────┼────────────────────────────┼────────────────────────────┤
-			│ test-index    │ 1536       │ euclidean   │ test-desc    │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
+			│ test-index │ 1536 │ euclidean │ test-desc │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
 			├───────────────┼────────────┼─────────────┼──────────────┼────────────────────────────┼────────────────────────────┤
-			│ another-index │ 32         │ dot-product │ another-desc │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
-			└───────────────┴────────────┴─────────────┴──────────────┴────────────────────────────┴────────────────────────────┘"
+			│ another-index │ 32 │ dot-product │ another-desc │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
+			└─┴─┴─┴─┴─┴─┘"
 		`);
 	});
 
@@ -359,11 +359,11 @@ describe("vectorize commands", () => {
 		mockVectorizeRequest();
 		await runWrangler("vectorize get test-index --deprecated-v1=true");
 		expect(std.out).toMatchInlineSnapshot(`
-			"┌────────────┬────────────┬────────┬─────────────┬────────────────────────────┬────────────────────────────┐
-			│ name       │ dimensions │ metric │ description │ created                    │ modified                   │
+			"┌─┬─┬─┬─┬─┬─┐
+			│ name │ dimensions │ metric │ description │ created │ modified │
 			├────────────┼────────────┼────────┼─────────────┼────────────────────────────┼────────────────────────────┤
-			│ test-index │ 768        │ cosine │             │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
-			└────────────┴────────────┴────────┴─────────────┴────────────────────────────┴────────────────────────────┘"
+			│ test-index │ 768 │ cosine │ │ 2023-09-25T13:02:18.00268Z │ 2023-09-25T13:02:18.00268Z │
+			└─┴─┴─┴─┴─┴─┘"
 		`);
 	});
 
@@ -371,11 +371,11 @@ describe("vectorize commands", () => {
 		mockVectorizeV2Request();
 		await runWrangler("vectorize get test-index");
 		expect(std.out).toMatchInlineSnapshot(`
-			"┌────────────┬────────────┬───────────┬─────────────┬────────────────────────────┬────────────────────────────┐
-			│ name       │ dimensions │ metric    │ description │ created                    │ modified                   │
+			"┌─┬─┬─┬─┬─┬─┐
+			│ name │ dimensions │ metric │ description │ created │ modified │
 			├────────────┼────────────┼───────────┼─────────────┼────────────────────────────┼────────────────────────────┤
-			│ test-index │ 1536       │ euclidean │ test-desc   │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
-			└────────────┴────────────┴───────────┴─────────────┴────────────────────────────┴────────────────────────────┘"
+			│ test-index │ 1536 │ euclidean │ test-desc │ 2024-07-11T13:02:18.00268Z │ 2024-07-11T13:02:18.00268Z │
+			└─┴─┴─┴─┴─┴─┘"
 		`);
 	});
 
@@ -589,11 +589,11 @@ describe("vectorize commands", () => {
 		await runWrangler("vectorize info test-index");
 		expect(std.out).toMatchInlineSnapshot(`
 			"📋 Fetching index info...
-┌────────────┬─────────────┬──────────────────────────────────────┬──────────────────────────┐
-│ dimensions │ vectorCount │ processedUpToMutation                │ processedUpToDatetime    │
-├────────────┼─────────────┼──────────────────────────────────────┼──────────────────────────┤
-│ 1024       │ 1000        │ 7f11d6e5-d126-4f76-936e-fbfec079e0be │ 2024-07-19T13:11:44.064Z │
-└────────────┴─────────────┴──────────────────────────────────────┴──────────────────────────┘"
+			┌─┬─┬─┬─┐
+			│ dimensions │ vectorCount │ processedUpToMutation │ processedUpToDatetime │
+			├────────────┼─────────────┼──────────────────────────────────────┼──────────────────────────┤
+			│ 1024 │ 1000 │ 7f11d6e5-d126-4f76-936e-fbfec079e0be │ 2024-07-19T13:11:44.064Z │
+			└─┴─┴─┴─┘"
 		`);
 	});
 
@@ -631,15 +631,15 @@ describe("vectorize commands", () => {
 		await runWrangler(`vectorize list-metadata-index test-index`);
 		expect(std.out).toMatchInlineSnapshot(`
 			"📋 Fetching metadata indexes...
-┌──────────────┬─────────┐
-│ propertyName │ type    │
-├──────────────┼─────────┤
-│ string-prop  │ string  │
-├──────────────┼─────────┤
-│ num-prop     │ number  │
-├──────────────┼─────────┤
-│ bool-prop    │ boolean │
-└──────────────┴─────────┘"
+			┌─┬─┐
+			│ propertyName │ type │
+			├──────────────┼─────────┤
+			│ string-prop │ string │
+			├──────────────┼─────────┤
+			│ num-prop │ number │
+			├──────────────┼─────────┤
+			│ bool-prop │ boolean │
+			└─┴─┘"
 		`);
 	});
 

@@ -129,13 +129,13 @@ describe("secrets-store store commands", () => {
 
 			expect(std.out).toMatchInlineSnapshot(`
 				"🔐 Listing stores...
-				┌─────────────┬──────────────────────────────────┬──────────────────────────────────┬───────────────────────┬───────────────────────┐
-				│ Name        │ ID                               │ AccountID                        │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┐
+				│ Name │ ID │ AccountID │ Created │ Modified │
 				├─────────────┼──────────────────────────────────┼──────────────────────────────────┼───────────────────────┼───────────────────────┤
 				│ other-store │ 8686c49f762447988c02fd472f1fa82d │ 1b3ea6aa53af9903d51524c75900323a │ [mock-create-date] │ [mock-modified-date] │
 				├─────────────┼──────────────────────────────────┼──────────────────────────────────┼───────────────────────┼───────────────────────┤
-				│ test-store  │ 8686c49f762447988c02fd472f1fa82c │ 1b3ea6aa53af9903d51524c75900323a │ [mock-create-date] │ [mock-modified-date] │
-				└─────────────┴──────────────────────────────────┴──────────────────────────────────┴───────────────────────┴───────────────────────┘"
+				│ test-store │ 8686c49f762447988c02fd472f1fa82c │ 1b3ea6aa53af9903d51524c75900323a │ [mock-create-date] │ [mock-modified-date] │
+				└─┴─┴─┴─┴─┘"
 			`);
 		});
 
@@ -212,11 +212,11 @@ describe("secrets-store secret commands", () => {
 				"
 				🔐 Creating secret... (Name: TEST_SECRET, Value: REDACTED, Scopes: workers, Comment: wrangler secret)
 				✅ Created secret! (ID: 36dabbe4d01c49de82847b9a22673cbd)
-				┌─────────────┬──────────────────────────────────┬──────────────────────────────────┬─────────────────┬─────────┬─────────┬───────────────────────┬───────────────────────┐
-				│ Name        │ ID                               │ StoreID                          │ Comment         │ Scopes  │ Status  │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┬─┬─┬─┐
+				│ Name │ ID │ StoreID │ Comment │ Scopes │ Status │ Created │ Modified │
 				├─────────────┼──────────────────────────────────┼──────────────────────────────────┼─────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
 				│ TEST_SECRET │ 36dabbe4d01c49de82847b9a22673cbd │ 850e0805c1084551bb46d150b5dfe414 │ wrangler secret │ workers │ pending │ [mock-create-date] │ [mock-modified-date] │
-				└─────────────┴──────────────────────────────────┴──────────────────────────────────┴─────────────────┴─────────┴─────────┴───────────────────────┴───────────────────────┘"
+				└─┴─┴─┴─┴─┴─┴─┴─┘"
 			`);
 		});
 
@@ -312,15 +312,15 @@ describe("secrets-store secret commands", () => {
 
 			expect(std.out).toMatchInlineSnapshot(`
 				"🔐 Listing secrets... (store-id: 850e0805c1084551bb46d150b5dfe414, page: 1, per-page: 10)
-				┌────────────┬──────────────────────────────────┬─────────────────────────────────┬─────────┬─────────┬───────────────────────┬───────────────────────┐
-				│ Name       │ ID                               │ Comment                         │ Scopes  │ Status  │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┬─┬─┐
+				│ Name │ ID │ Comment │ Scopes │ Status │ Created │ Modified │
 				├────────────┼──────────────────────────────────┼─────────────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
-				│ SECRET_KEY │ 8b108ac1cf244f91a17964f585ffa707 │ Key for Algolia search indexing │ workers │ active  │ [mock-create-date] │ [mock-modified-date] │
+				│ SECRET_KEY │ 8b108ac1cf244f91a17964f585ffa707 │ Key for Algolia search indexing │ workers │ active │ [mock-create-date] │ [mock-modified-date] │
 				├────────────┼──────────────────────────────────┼─────────────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
-				│ API_KEY    │ 2821af4e600a446f87af4e9944b693c3 │ Key for DigitalOcean droplets   │ workers │ active  │ [mock-create-date] │ [mock-modified-date] │
+				│ API_KEY │ 2821af4e600a446f87af4e9944b693c3 │ Key for DigitalOcean droplets │ workers │ active │ [mock-create-date] │ [mock-modified-date] │
 				├────────────┼──────────────────────────────────┼─────────────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
-				│ DB_KEY     │ df3f6eb1159a4f10ac5fe836e2b8169c │ Key for PostgreSQL database     │ workers │ active  │ [mock-create-date] │ [mock-modified-date] │
-				└────────────┴──────────────────────────────────┴─────────────────────────────────┴─────────┴─────────┴───────────────────────┴───────────────────────┘"
+				│ DB_KEY │ df3f6eb1159a4f10ac5fe836e2b8169c │ Key for PostgreSQL database │ workers │ active │ [mock-create-date] │ [mock-modified-date] │
+				└─┴─┴─┴─┴─┴─┴─┘"
 			`);
 		});
 
@@ -362,11 +362,11 @@ describe("secrets-store secret commands", () => {
 
 			expect(std.out).toMatchInlineSnapshot(`
 				"🔐 Getting secret... (ID: df3f6eb1159a4f10ac5fe836e2b8169c)
-				┌────────┬──────────────────────────────────┬──────────────────────────────────┬─────────────────────────────┬─────────┬─────────┬───────────────────────┬───────────────────────┐
-				│ Name   │ ID                               │ StoreID                          │ Comment                     │ Scopes  │ Status  │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┬─┬─┬─┐
+				│ Name │ ID │ StoreID │ Comment │ Scopes │ Status │ Created │ Modified │
 				├────────┼──────────────────────────────────┼──────────────────────────────────┼─────────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
-				│ DB_KEY │ df3f6eb1159a4f10ac5fe836e2b8169c │ 850e0805c1084551bb46d150b5dfe414 │ Key for PostgreSQL database │ workers │ active  │ [mock-create-date] │ [mock-modified-date] │
-				└────────┴──────────────────────────────────┴──────────────────────────────────┴─────────────────────────────┴─────────┴─────────┴───────────────────────┴───────────────────────┘"
+				│ DB_KEY │ df3f6eb1159a4f10ac5fe836e2b8169c │ 850e0805c1084551bb46d150b5dfe414 │ Key for PostgreSQL database │ workers │ active │ [mock-create-date] │ [mock-modified-date] │
+				└─┴─┴─┴─┴─┴─┴─┴─┘"
 			`);
 		});
 
@@ -478,11 +478,11 @@ describe("secrets-store secret commands", () => {
 			expect(std.out).toMatchInlineSnapshot(`
 				"🔐 Updating secret... (ID: df3f6eb1159a4f10ac5fe836e2b8169c)
 				✅ Updated secret! (ID: 36dabbe4d01c49de82847b9a22673cbd)
-				┌────────┬──────────────────────────────────┬──────────────────────────────────┬────────────────────────┬─────────┬─────────┬───────────────────────┬───────────────────────┐
-				│ Name   │ ID                               │ StoreID                          │ Comment                │ Scopes  │ Status  │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┬─┬─┬─┐
+				│ Name │ ID │ StoreID │ Comment │ Scopes │ Status │ Created │ Modified │
 				├────────┼──────────────────────────────────┼──────────────────────────────────┼────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
 				│ DB_KEY │ 36dabbe4d01c49de82847b9a22673cbd │ 850e0805c1084551bb46d150b5dfe414 │ wrangler secret update │ workers │ pending │ [mock-create-date] │ [mock-modified-date] │
-				└────────┴──────────────────────────────────┴──────────────────────────────────┴────────────────────────┴─────────┴─────────┴───────────────────────┴───────────────────────┘"
+				└─┴─┴─┴─┴─┴─┴─┴─┘"
 			`);
 		});
 
@@ -580,11 +580,11 @@ describe("secrets-store secret commands", () => {
 			expect(std.out).toMatchInlineSnapshot(`
 				"🔐 Duplicating secret... (ID: df3f6eb1159a4f10ac5fe836e2b8169c)
 				✅ Duplicated secret! (ID: 36dabbe4d01c49de82847b9a22673cbd)
-				┌────────┬──────────────────────────────────┬──────────────────────────────────┬────────────────────────┬─────────┬─────────┬───────────────────────┬───────────────────────┐
-				│ Name   │ ID                               │ StoreID                          │ Comment                │ Scopes  │ Status  │ Created               │ Modified              │
+				┌─┬─┬─┬─┬─┬─┬─┬─┐
+				│ Name │ ID │ StoreID │ Comment │ Scopes │ Status │ Created │ Modified │
 				├────────┼──────────────────────────────────┼──────────────────────────────────┼────────────────────────┼─────────┼─────────┼───────────────────────┼───────────────────────┤
 				│ DB_KEY │ 36dabbe4d01c49de82847b9a22673cbd │ 850e0805c1084551bb46d150b5dfe414 │ wrangler secret update │ workers │ pending │ [mock-create-date] │ [mock-modified-date] │
-				└────────┴──────────────────────────────────┴──────────────────────────────────┴────────────────────────┴─────────┴─────────┴───────────────────────┴───────────────────────┘"
+				└─┴─┴─┴─┴─┴─┴─┴─┘"
 			`);
 		});
 

@@ -186,15 +186,15 @@ describe("whoami", () => {
 		expect(std.out).toMatchInlineSnapshot(`
 			"Getting User settings...
 			👋 You are logged in with an OAuth Token, associated with the email user@example.com.
-			┌───────────────┬────────────┐
-			│ Account Name  │ Account ID │
+			┌─┬─┐
+			│ Account Name │ Account ID │
 			├───────────────┼────────────┤
-			│ Account One   │ account-1  │
+			│ Account One │ account-1 │
 			├───────────────┼────────────┤
-			│ Account Two   │ account-2  │
+			│ Account Two │ account-2 │
 			├───────────────┼────────────┤
-			│ Account Three │ account-3  │
-			└───────────────┴────────────┘
+			│ Account Three │ account-3 │
+			└─┴─┘
 			🔓 Token Permissions: If scopes are missing, you may need to logout and re-login.
 			Scope (Access)
 			🎢 Membership roles in \\"Account Two\\": Contact account super admin to change your permissions.
@@ -220,15 +220,15 @@ describe("whoami", () => {
 		expect(std.out).toMatchInlineSnapshot(`
 			"Getting User settings...
 			👋 You are logged in with an OAuth Token, associated with the email user@example.com.
-			┌───────────────┬────────────┐
-			│ Account Name  │ Account ID │
+			┌─┬─┐
+			│ Account Name │ Account ID │
 			├───────────────┼────────────┤
-			│ Account One   │ account-1  │
+			│ Account One │ account-1 │
 			├───────────────┼────────────┤
-			│ Account Two   │ account-2  │
+			│ Account Two │ account-2 │
 			├───────────────┼────────────┤
-			│ Account Three │ account-3  │
-			└───────────────┴────────────┘
+			│ Account Three │ account-3 │
+			└─┴─┘
 			🔓 Token Permissions: If scopes are missing, you may need to logout and re-login.
 			Scope (Access)
 			🎢 Unable to get membership roles. Make sure you have permissions to read the account. Are you missing the \`User->Memberships->Read\` permission?"

@@ -211,13 +211,13 @@ describe("wrangler workflows", () => {
 			expect(std.info).toMatchInlineSnapshot(`"Showing last 2 workflows:"`);
 			expect(std.out).toMatchInlineSnapshot(
 				`
-				"┌──────┬─────────────┬────────────┬───────────────────────┬───────────────────────┐
-				│ Name │ Script name │ Class name │ Created               │ Modified              │
+				"┌─┬─┬─┬─┬─┐
+				│ Name │ Script name │ Class name │ Created │ Modified │
 				├──────┼─────────────┼────────────┼───────────────────────┼───────────────────────┤
 				│ wf_1 │ wf_script_1 │ wf_class_1 │ [mock-create-date] │ [mock-modified-date] │
 				├──────┼─────────────┼────────────┼───────────────────────┼───────────────────────┤
 				│ wf_2 │ wf_script_2 │ wf_class_2 │ [mock-create-date] │ [mock-modified-date] │
-				└──────┴─────────────┴────────────┴───────────────────────┴───────────────────────┘"
+				└─┴─┴─┴─┴─┘"
 			`
 			);
 		});
@@ -293,23 +293,23 @@ describe("wrangler workflows", () => {
 			);
 			expect(std.out).toMatchInlineSnapshot(
 				`
-				"┌────┬─────────┬───────────────────────┬───────────────────────┬───────────────┐
-				│ Id │ Version │ Created               │ Modified              │ Status        │
+				"┌─┬─┬─┬─┬─┐
+				│ Id │ Version │ Created │ Modified │ Status │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ a  │ c       │ [mock-create-date] │ [mock-modified-date] │ ✅ Completed  │
+				│ a │ c │ [mock-create-date] │ [mock-modified-date] │ ✅ Completed │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ b  │ c       │ [mock-create-date] │ [mock-modified-date] │ ❌ Errored    │
+				│ b │ c │ [mock-create-date] │ [mock-modified-date] │ ❌ Errored │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ c  │ c       │ [mock-create-date] │ [mock-modified-date] │ ⏸️ Paused     │
+				│ c │ c │ [mock-create-date] │ [mock-modified-date] │ ⏸️ Paused │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ d  │ c       │ [mock-create-date] │ [mock-modified-date] │ ⌛ Queued     │
+				│ d │ c │ [mock-create-date] │ [mock-modified-date] │ ⌛ Queued │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ d  │ c       │ [mock-create-date] │ [mock-modified-date] │ ▶ Running     │
+				│ d │ c │ [mock-create-date] │ [mock-modified-date] │ ▶ Running │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ e  │ c       │ [mock-create-date] │ [mock-modified-date] │ 🚫 Terminated │
+				│ e │ c │ [mock-create-date] │ [mock-modified-date] │ 🚫 Terminated │
 				├────┼─────────┼───────────────────────┼───────────────────────┼───────────────┤
-				│ e  │ c       │ [mock-create-date] │ [mock-modified-date] │ ⏰ Waiting    │
-				└────┴─────────┴───────────────────────┴───────────────────────┴───────────────┘"
+				│ e │ c │ [mock-create-date] │ [mock-modified-date] │ ⏰ Waiting │
+				└─┴─┴─┴─┴─┘"
 			`
 			);
 		});
@@ -403,11 +403,11 @@ describe("wrangler workflows", () => {
 				  Duration:  4 years
 				  Success:   ✅ Yes
 				  Output:    {}
-				┌───────────────────────┬───────────────────────┬──────────┬────────────┬────────────────┐
-				│ Start                 │ End                   │ Duration │ State      │ Error          │
+				┌─┬─┬─┬─┬─┐
+				│ Start │ End │ Duration │ State │ Error │
 				├───────────────────────┼───────────────────────┼──────────┼────────────┼────────────────┤
-				│ [mock-start-date] │ [mock-end-date] │ 4 years  │ ✅ Success │ string: string │
-				└───────────────────────┴───────────────────────┴──────────┴────────────┴────────────────┘"
+				│ [mock-start-date] │ [mock-end-date] │ 4 years │ ✅ Success │ string: string │
+				└─┴─┴─┴─┴─┘"
 			`);
 		});
 	});

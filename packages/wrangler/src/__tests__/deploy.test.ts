@@ -473,29 +473,29 @@ describe("deploy", () => {
 			`[APIError: A request to the Cloudflare API (/accounts/some-account-id/workers/services/test-name) failed.]`
 		);
 		expect(std.out).toMatchInlineSnapshot(`
-		"
-		[31mX [41;31m[[41;97mERROR[41;31m][0m [1mA request to the Cloudflare API (/accounts/some-account-id/workers/services/test-name) failed.[0m
+			"
+			[31mX [41;31m[[41;97mERROR[41;31m][0m [1mA request to the Cloudflare API (/accounts/some-account-id/workers/services/test-name) failed.[0m
 
-		  Authentication error [code: 10000]
+			  Authentication error [code: 10000]
 
 
-		📎 It looks like you are authenticating Wrangler via a custom API token set in an environment variable.
-		Please ensure it has the correct permissions for this operation.
+			📎 It looks like you are authenticating Wrangler via a custom API token set in an environment variable.
+			Please ensure it has the correct permissions for this operation.
 
-		Getting User settings...
-		ℹ️  The API Token is read from the CLOUDFLARE_API_TOKEN in your environment.
-		👋 You are logged in with an API Token, associated with the email user@example.com.
-		┌───────────────┬────────────┐
-		│ Account Name  │ Account ID │
-		├───────────────┼────────────┤
-		│ Account One   │ account-1  │
-		├───────────────┼────────────┤
-		│ Account Two   │ account-2  │
-		├───────────────┼────────────┤
-		│ Account Three │ account-3  │
-		└───────────────┴────────────┘
-		🔓 To see token permissions visit https://dash.cloudflare.com/profile/api-tokens."
-	`);
+			Getting User settings...
+			ℹ️  The API Token is read from the CLOUDFLARE_API_TOKEN in your environment.
+			👋 You are logged in with an API Token, associated with the email user@example.com.
+			┌─┬─┐
+			│ Account Name │ Account ID │
+			├───────────────┼────────────┤
+			│ Account One │ account-1 │
+			├───────────────┼────────────┤
+			│ Account Two │ account-2 │
+			├───────────────┼────────────┤
+			│ Account Three │ account-3 │
+			└─┴─┘
+			🔓 To see token permissions visit https://dash.cloudflare.com/profile/api-tokens."
+		`);
 	});
 
 	it("should error helpfully if pages_build_output_dir is set in wrangler.toml", async () => {
@@ -2996,19 +2996,19 @@ addEventListener('fetch', event => {});`
 			Uploaded 100% [2 out of 2]"
 		`);
 			expect(std.out).toMatchInlineSnapshot(`
-				"┌───────────────────┬──────┬──────────┐
-				│ Name              │ Type │ Size     │
+				"┌─┬─┬─┐
+				│ Name │ Type │ Size │
 				├───────────────────┼──────┼──────────┤
-				│ a/1.mjs           │ esm  │ xx KiB │
+				│ a/1.mjs │ esm │ xx KiB │
 				├───────────────────┼──────┼──────────┤
-				│ a/b/2.mjs         │ esm  │ xx KiB │
+				│ a/b/2.mjs │ esm │ xx KiB │
 				├───────────────────┼──────┼──────────┤
-				│ a/b/3.mjs         │ esm  │ xx KiB │
+				│ a/b/3.mjs │ esm │ xx KiB │
 				├───────────────────┼──────┼──────────┤
-				│ a/b/c/4.mjs       │ esm  │ xx KiB │
+				│ a/b/c/4.mjs │ esm │ xx KiB │
 				├───────────────────┼──────┼──────────┤
-				│ Total (4 modules) │      │ xx KiB │
-				└───────────────────┴──────┴──────────┘
+				│ Total (4 modules) │ │ xx KiB │
+				└─┴─┴─┘
 				↗️  Done syncing assets
 				Total Upload: xx KiB / gzip: xx KiB
 				Worker Startup Time: 100 ms
